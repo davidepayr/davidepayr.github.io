@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+05/03/2024 09:01:33 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/65ca901519ad76e61e000003.65cf2f572b0fc9bdb453d44b.FcuxjaR.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+ 
+  --font-size-l: 27.1px;
+  --font-size-m: 27px;
+  --font-size-s: 18.2px;
+  --font-size-xl: 27.3px;
+  --font-size-xs: 18.1px;
+  --font-size-xxs: 18px;
+ 
+  --font-family-ibm_plex_mono: "IBM Plex Mono", Helvetica;
+}
+.ibmplexmono-bold-black-27px {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ibmplexmono-bold-black-27-1px {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ibmplexmono-bold-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ibmplexmono-bold-black-27-3px {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.ibmplexmono-bold-black-18-1px {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+:root {
+}
+
+
+/* screen - website-portfolio */
+
+.website-portfolio {
+  background-color: #ffffff;
+  height: 18319px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.website-portfolio .art-direction-asst-s-dHompM {
+  background-color: transparent;
+  height: 182px;
+  left: 295px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 56px;
+  width: 826px;
+}
+
+.website-portfolio .raus-art-direction-f-dHompM {
+  background-color: transparent;
+  height: 95px;
+  left: 294px;
+  letter-spacing: 0.00px;
+  line-height: 18.2px;
+  position: absolute;
+  text-align: left;
+  top: 330px;
+  width: 336px;
+}
+
+.website-portfolio .span0-XWR5bC {
+}
+
+.website-portfolio .span1-XWR5bC {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.website-portfolio .raus-video-dHompM {
+  background-color: transparent;
+  height: 477px;
+  left: 294px;
+  overflow: hidden;
+  position: absolute;
+  top: 436px;
+  width: 848px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1133-1-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 923px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1133-2-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 923px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1133-3-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 923px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1134-4-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 1112px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1134-1-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 1112px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1134-2-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 1112px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1134-3-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 1301px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-1-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 1301px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-3-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 1301px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-4-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 1490px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-5-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 1490px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-6-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 1490px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1136-1-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 1679px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1135-7-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 1679px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1136-3-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 1679px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1136-2-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 1868px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1137-3-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 1868px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2023-12-21-at-1137-2-dHompM {
+  background-color: transparent;
+  height: 179px;
+  left: 863px;
+  object-fit: cover;
+  position: absolute;
+  top: 1868px;
+  width: 277px;
+}
+
+.website-portfolio .x36010005-1-dHompM {
+  background-color: transparent;
+  height: 590px;
+  left: 294px;
+  object-fit: cover;
+  position: absolute;
+  top: 2057px;
+  width: 418px;
+}
+
+.website-portfolio .c709-df5-a-73-ae-491-dHompM {
+  background-color: transparent;
+  height: 590px;
+  left: 720px;
+  object-fit: cover;
+  position: absolute;
+  top: 2057px;
+  width: 418px;
+}
+
+.website-portfolio .burgtheater-requisit-dHompM {
+  background-color: transparent;
+  height: 96px;
+  left: 295px;
+  letter-spacing: 0.00px;
+  line-height: 18.2px;
+  position: absolute;
+  text-align: left;
+  top: 2742px;
+  width: 336px;
+}
+
+.website-portfolio .span0-IyfUHK {
+}
+
+.website-portfolio .span1-IyfUHK {
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.website-portfolio .x2023_02_burgtheater_-dHompM {
+  background-color: transparent;
+  height: 434px;
+  left: 295px;
+  position: absolute;
+  top: 2849px;
+  width: 847px;
+}
+
+.website-portfolio .kasimir-karoline_2_-matthias-horn_u-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 3293px;
+  width: 847px;
+}
+
+.website-portfolio .x33460930_xxl-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 3780px;
+  width: 847px;
+}
+
+.website-portfolio .nosferatu_c_-susanne-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 4266px;
+  width: 847px;
+}
+
+.website-portfolio .d1636944-f9ec-4bfe-b07d-2fbba8c8066b-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 4752px;
+  width: 847px;
+}
+
+.website-portfolio .dantons-tod_c_-matthias_-horn_1941-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 5238px;
+  width: 847px;
+}
+
+.website-portfolio .die_-zauberflote_c_-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 5725px;
+  width: 847px;
+}
+
+.website-portfolio .der-menschenfeind_4_-matthias_-horn-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 6211px;
+  width: 847px;
+}
+
+.website-portfolio .der-menschenfeind_c_-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 6697px;
+  width: 847px;
+}
+
+.website-portfolio .drei-winter_c_-matth-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 7184px;
+  width: 847px;
+}
+
+.website-portfolio .drei_-winter_c_-matthias_-horn_1608-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 295px;
+  object-fit: cover;
+  position: absolute;
+  top: 7670px;
+  width: 847px;
+}
+
+.website-portfolio .simplytv-requisiteur-dHompM {
+  background-color: transparent;
+  color: var(--black);
+  font-family: var(--font-family-ibm_plex_mono);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: 95px;
+  left: 297px;
+  letter-spacing: 0.00px;
+  line-height: 18.2px;
+  position: absolute;
+  text-align: left;
+  top: 8254px;
+  width: 335px;
+}
+
+.website-portfolio .span0-dZkmqc {
+  font-style: normal;
+}
+
+.website-portfolio .span1-dZkmqc {
+  font-size: var(--font-size-s);
+  font-style: normal;
+}
+
+.website-portfolio .simplytv-dHompM {
+  background-color: transparent;
+  height: 476px;
+  left: 297px;
+  overflow: hidden;
+  position: absolute;
+  top: 8360px;
+  width: 847px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-dHompM {
+  height: 179px;
+  left: 297px;
+  top: 8846px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-xZwtzq {
+  height: 179px;
+  left: 582px;
+  top: 8846px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-PU5qZn {
+  height: 179px;
+  left: 866px;
+  top: 8846px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-STo1xX {
+  height: 179px;
+  left: 297px;
+  top: 9035px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-BlK2sv {
+  height: 179px;
+  left: 582px;
+  top: 9035px;
+  width: 277px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-q489G7 {
+  height: 179px;
+  left: 866px;
+  top: 9035px;
+  width: 277px;
+}
+
+.website-portfolio .wiener-stdtische-set-dHompM {
+  background-color: transparent;
+  height: 97px;
+  left: 297px;
+  letter-spacing: 0.00px;
+  line-height: 18.0px;
+  position: absolute;
+  text-align: left;
+  top: 9322px;
+  width: 335px;
+}
+
+.website-portfolio .span0-IxChrQ {
+}
+
+.website-portfolio .span1-IxChrQ {
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0637-1-dHompM {
+  background-color: transparent;
+  height: 517px;
+  left: 297px;
+  overflow: hidden;
+  position: absolute;
+  top: 9430px;
+  width: 839px;
+}
+
+.website-portfolio .screenshot-2023-10-31-at-1035-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 297px;
+  object-fit: cover;
+  position: absolute;
+  top: 9957px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2023-10-31-at-1035-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 9957px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2023-10-31-at-1036-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 861px;
+  object-fit: cover;
+  position: absolute;
+  top: 9957px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2023-10-31-at-1035-3-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 297px;
+  object-fit: cover;
+  position: absolute;
+  top: 10144px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0637-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 579px;
+  object-fit: cover;
+  position: absolute;
+  top: 10144px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2023-10-31-at-1035-4-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 861px;
+  object-fit: cover;
+  position: absolute;
+  top: 10144px;
+  width: 274px;
+}
+
+.website-portfolio .ycom2-food-styling-a-dHompM {
+  background-color: transparent;
+  height: 94px;
+  left: 296px;
+  letter-spacing: 0.00px;
+  line-height: 18.1px;
+  position: absolute;
+  text-align: left;
+  top: 10428px;
+  width: 395px;
+}
+
+.website-portfolio .span0-Vd1oDA {
+}
+
+.website-portfolio .span1-Vd1oDA {
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1130-3-dHompM {
+  background-color: transparent;
+  height: 517px;
+  left: 296px;
+  overflow: hidden;
+  position: absolute;
+  top: 10533px;
+  width: 839px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1130-2-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 296px;
+  object-fit: cover;
+  position: absolute;
+  top: 11060px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1135-2-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 578px;
+  object-fit: cover;
+  position: absolute;
+  top: 11060px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1134-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 860px;
+  object-fit: cover;
+  position: absolute;
+  top: 11061px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1137-1-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 296px;
+  object-fit: cover;
+  position: absolute;
+  top: 11248px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1138-1-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 578px;
+  object-fit: cover;
+  position: absolute;
+  top: 11248px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-02-16-at-1143-1-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 860px;
+  object-fit: cover;
+  position: absolute;
+  top: 11248px;
+  width: 274px;
+}
+
+.website-portfolio .in-der-nacht-set-des-dHompM {
+  background-color: transparent;
+  height: 97px;
+  left: 296px;
+  letter-spacing: 0.00px;
+  line-height: 18.0px;
+  position: absolute;
+  text-align: left;
+  top: 11531px;
+  width: 308px;
+}
+
+.website-portfolio .span0-odI78A {
+}
+
+.website-portfolio .span1-odI78A {
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0604-1-dHompM {
+  background-color: transparent;
+  height: 472px;
+  left: 296px;
+  overflow: hidden;
+  position: absolute;
+  top: 11639px;
+  width: 838px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0604-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 296px;
+  object-fit: cover;
+  position: absolute;
+  top: 12121px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0604-3-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 578px;
+  object-fit: cover;
+  position: absolute;
+  top: 12121px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0604-6-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 860px;
+  object-fit: cover;
+  position: absolute;
+  top: 12121px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0604-5-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 296px;
+  object-fit: cover;
+  position: absolute;
+  top: 12308px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0605-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 578px;
+  object-fit: cover;
+  position: absolute;
+  top: 12308px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0605-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 860px;
+  object-fit: cover;
+  position: absolute;
+  top: 12308px;
+  width: 274px;
+}
+
+.website-portfolio .adeg-head-food-styli-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.0px;
+  position: absolute;
+  text-align: left;
+  top: 12578px;
+  width: 212px;
+}
+
+.website-portfolio .span0-o2x17Y {
+}
+
+.website-portfolio .span1-o2x17Y {
+}
+
+.website-portfolio .adeg-video-resume-dHompM {
+  background-color: transparent;
+  height: 472px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 12694px;
+  width: 838px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556-dHompM {
+  left: 302px;
+  top: 13176px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556-xZwtzq {
+  left: 584px;
+  top: 13176px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556-PU5qZn {
+  left: 866px;
+  top: 13176px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556-STo1xX {
+  left: 302px;
+  top: 13363px;
+}
+
+.website-portfolio .screenshot-2024-03-01-at-1101-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 13363px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556-BlK2sv {
+  left: 866px;
+  top: 13363px;
+}
+
+.website-portfolio .bundesministerium-in-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.0px;
+  position: absolute;
+  text-align: left;
+  top: 13639px;
+  width: 463px;
+}
+
+.website-portfolio .span0-wB7NmJ {
+}
+
+.website-portfolio .span1-wB7NmJ {
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0601-1-dHompM {
+  background-color: transparent;
+  height: 472px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 13754px;
+  width: 838px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0600-1-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 302px;
+  object-fit: cover;
+  position: absolute;
+  top: 14236px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0600-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 14236px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0600-3-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 866px;
+  object-fit: cover;
+  position: absolute;
+  top: 14236px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0601-2-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 302px;
+  object-fit: cover;
+  position: absolute;
+  top: 14423px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0601-3-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 584px;
+  object-fit: cover;
+  position: absolute;
+  top: 14423px;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0601-5-dHompM {
+  background-color: transparent;
+  height: 177px;
+  left: 866px;
+  object-fit: cover;
+  position: absolute;
+  top: 14423px;
+  width: 274px;
+}
+
+.website-portfolio .arbeiterkammer-junio-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.1px;
+  position: absolute;
+  text-align: left;
+  top: 14699px;
+  width: 309px;
+}
+
+.website-portfolio .span0-6XpzXG {
+}
+
+.website-portfolio .span1-6XpzXG {
+}
+
+.website-portfolio .arbeiterkammer-dHompM {
+  background-color: transparent;
+  height: 473px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 14814px;
+  width: 841px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-dHompM {
+  left: 302px;
+  top: 15298px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-xZwtzq {
+  left: 585px;
+  top: 15298px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-x8jBBL {
+  height: 178px;
+  left: 868px;
+  top: 15298px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-PU5qZn {
+  left: 302px;
+  top: 15486px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-STo1xX {
+  left: 585px;
+  top: 15486px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558-DM728u {
+  height: 178px;
+  left: 868px;
+  top: 15486px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-BlK2sv {
+  left: 302px;
+  top: 15673px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-q489G7 {
+  left: 585px;
+  top: 15673px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559-x8jBBL {
+  left: 868px;
+  top: 15673px;
+}
+
+.website-portfolio .drei-austria-set-des-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.1px;
+  position: absolute;
+  text-align: left;
+  top: 15949px;
+  width: 309px;
+}
+
+.website-portfolio .span0-gtj5gW {
+}
+
+.website-portfolio .span1-gtj5gW {
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-1-dHompM {
+  background-color: transparent;
+  height: 473px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 16063px;
+  width: 841px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-7-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 302px;
+  object-fit: cover;
+  position: absolute;
+  top: 16547px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-6-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 585px;
+  object-fit: cover;
+  position: absolute;
+  top: 16547px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-3-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 868px;
+  object-fit: cover;
+  position: absolute;
+  top: 16547px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-4-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 302px;
+  object-fit: cover;
+  position: absolute;
+  top: 16735px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-5-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 585px;
+  object-fit: cover;
+  position: absolute;
+  top: 16735px;
+  width: 275px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0603-2-dHompM {
+  background-color: transparent;
+  height: 178px;
+  left: 868px;
+  object-fit: cover;
+  position: absolute;
+  top: 16735px;
+  width: 275px;
+}
+
+.website-portfolio .ein-ganzes-leben-req-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.0px;
+  position: absolute;
+  text-align: left;
+  top: 17012px;
+  width: 333px;
+}
+
+.website-portfolio .span0-XG7xKP {
+}
+
+.website-portfolio .span1-XG7xKP {
+}
+
+.website-portfolio .f8c88419e888431f12bf-dHompM {
+  background-color: transparent;
+  height: 472px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 17126px;
+  width: 838px;
+}
+
+.website-portfolio .vienna-blood-food-st-dHompM {
+  background-color: transparent;
+  height: auto;
+  left: 302px;
+  letter-spacing: 0.00px;
+  line-height: 18.1px;
+  position: absolute;
+  text-align: left;
+  top: 17702px;
+  width: 309px;
+}
+
+.website-portfolio .span0-HoWlV5 {
+}
+
+.website-portfolio .span1-HoWlV5 {
+}
+
+.website-portfolio .vienna-blood-dHompM {
+  background-color: transparent;
+  height: 473px;
+  left: 302px;
+  overflow: hidden;
+  position: absolute;
+  top: 17816px;
+  width: 841px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0556 {
+  background-color: transparent;
+  height: 177px;
+  object-fit: cover;
+  position: absolute;
+  width: 274px;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0558 {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+}
+
+.website-portfolio .screenshot-2024-01-16-at-0559 {
+  background-color: transparent;
+  height: 178px;
+  object-fit: cover;
+  position: absolute;
+  width: 275px;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="website-portfolio"><div class="container-center-horizontal"><div class="website-portfolio screen " data-id="79:2"><img class="art-direction-asst-s-dHompM" data-id="26:10" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e6d3aafcc8ea67c537aaef/img/art-direction-asst----set-design---props---food-styling-davide-p.png" alt="ART DIRECTION ASST. / SET DESIGN / PROPS / FOOD STYLING Davide Payr Vienna office.payr@gmail.com IG @davidepayr Portfolio 2024"><h1 class="raus-art-direction-f-dHompM valign-text-bottom ibmplexmono-bold-black-27-3px" data-id="93:2"><span><span class="span0-XWR5bC ibmplexmono-bold-black-27-3px">RAUS<br></span><span class="span1-XWR5bC">Art Direction<br>für Noah Rosa<br>Musikvideo „RAUS“ <br>30.10.23 – 06.11.23</span></span></h1><div class="raus-video-dHompM" data-id="45:20"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/6V1DujyfEMo?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2023-12-21-at-1133-1-dHompM" data-id="45:21" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-33-1.png" alt="Screenshot 2023-12-21 at 11.33 1"><img class="screenshot-2023-12-21-at-1133-2-dHompM" data-id="45:22" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-33-2.png" alt="Screenshot 2023-12-21 at 11.33 2"><img class="screenshot-2023-12-21-at-1133-3-dHompM" data-id="45:23" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-33-3.png" alt="Screenshot 2023-12-21 at 11.33 3"><img class="screenshot-2023-12-21-at-1134-4-dHompM" data-id="45:24" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-34-4.png" alt="Screenshot 2023-12-21 at 11.34 4"><img class="screenshot-2023-12-21-at-1134-1-dHompM" data-id="45:25" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-34-1.png" alt="Screenshot 2023-12-21 at 11.34 1"><img class="screenshot-2023-12-21-at-1134-2-dHompM" data-id="45:26" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-34-2.png" alt="Screenshot 2023-12-21 at 11.34 2"><img class="screenshot-2023-12-21-at-1134-3-dHompM" data-id="45:27" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-34-3.png" alt="Screenshot 2023-12-21 at 11.34 3"><img class="screenshot-2023-12-21-at-1135-1-dHompM" data-id="45:28" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/raus-video.png" alt="Screenshot 2023-12-21 at 11.35 1"><img class="screenshot-2023-12-21-at-1135-3-dHompM" data-id="45:32" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-35-3.png" alt="Screenshot 2023-12-21 at 11.35 3"><img class="screenshot-2023-12-21-at-1135-4-dHompM" data-id="45:30" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-35-4.png" alt="Screenshot 2023-12-21 at 11.35 4"><img class="screenshot-2023-12-21-at-1135-5-dHompM" data-id="45:33" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-35-5.png" alt="Screenshot 2023-12-21 at 11.35 5"><img class="screenshot-2023-12-21-at-1135-6-dHompM" data-id="45:29" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-35-6.png" alt="Screenshot 2023-12-21 at 11.35 6"><img class="screenshot-2023-12-21-at-1136-1-dHompM" data-id="45:31" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-36-1.png" alt="Screenshot 2023-12-21 at 11.36 1"><img class="screenshot-2023-12-21-at-1135-7-dHompM" data-id="45:34" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-35-7.png" alt="Screenshot 2023-12-21 at 11.35 7"><img class="screenshot-2023-12-21-at-1136-3-dHompM" data-id="45:37" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-36-3.png" alt="Screenshot 2023-12-21 at 11.36 3"><img class="screenshot-2023-12-21-at-1136-2-dHompM" data-id="45:35" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-36-2.png" alt="Screenshot 2023-12-21 at 11.36 2"><img class="screenshot-2023-12-21-at-1137-3-dHompM" data-id="45:38" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-37-3.png" alt="Screenshot 2023-12-21 at 11.37 3"><img class="screenshot-2023-12-21-at-1137-2-dHompM" data-id="45:36" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-12-21-at-11-37-2.png" alt="Screenshot 2023-12-21 at 11.37 2"><img class="x36010005-1-dHompM" data-id="45:39" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/36010005-1.png" alt="36010005 1"><img class="c709-df5-a-73-ae-491-dHompM" data-id="45:40" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/c709df5a-73ae-4914-9700-ebc617afe49e-1-102-o-1.png" alt="C709DF5A-73AE-4914-9700-EBC617AFE49E_1_102_o 1"><p class="burgtheater-requisit-dHompM valign-text-bottom ibmplexmono-bold-black-27-3px" data-id="84:20"><span><span class="span0-IyfUHK ibmplexmono-bold-black-27-3px">BURGTHEATER<br></span><span class="span1-IyfUHK">Requisiteur<br>für Burgtheater Wien<br>Vollzeit<br>11.12.23 - 29.02.24</span></span></p><img class="x2023_02_burgtheater_-dHompM" data-id="84:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e6dbfd7ef4a49e88ae6427/img/2023-02-burgtheater-kasimir-und-karoline-c-matthias-horn.png" alt="2023_02_burgtheater_kasimir-und-karoline_c_matthias-horn"><img class="kasimir-karoline_2_-matthias-horn_u-dHompM" data-id="84:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/kasimir-karoline-2-matthiashorn-u.png" alt="Kasimir-Karoline_2_MatthiasHorn_u"><img class="x33460930_xxl-dHompM" data-id="84:7" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/33460930-xxl.png" alt="33460930_XXL"><img class="nosferatu_c_-susanne-dHompM" data-id="84:19" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/nosferatu-c-susanne-hassler-smith-018-0.png" alt="Nosferatu_c_Susanne_Hassler-Smith_018_0"><img class="d1636944-f9ec-4bfe-b07d-2fbba8c8066b-dHompM" data-id="84:9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/d1636944-f9ec-4bfe-b07d-2fbba8c8066b.png" alt="d1636944-f9ec-4bfe-b07d-2fbba8c8066b"><img class="dantons-tod_c_-matthias_-horn_1941-dHompM" data-id="84:10" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/dantons-tod-c-matthias-horn-1941.png" alt="Dantons-Tod_c_Matthias_Horn_1941"><img class="die_-zauberflote_c_-dHompM" data-id="84:21" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d2558dcc0cd721b096b4/img/die-zauberflo-te-c-marcella-ruiz-cruz-4519-1.png" alt="Die_Zauberflote_c_Marcella_Ruiz_Cruz_4519 1"><img class="der-menschenfeind_4_-matthias_-horn-dHompM" data-id="84:12" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/der-menschenfeind-4-matthias-horn.png" alt="Der-Menschenfeind_4_Matthias_Horn"><img class="der-menschenfeind_c_-dHompM" data-id="84:11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/der-menschenfeind-c-marcella-ruiz-cruz-105a3030.png" alt="Der Menschenfeind_c_Marcella Ruiz Cruz_105A3030"><img class="drei-winter_c_-matth-dHompM" data-id="84:14" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/drei-winter-c-matthias-horn-1300-1-1682276548522408-v0-h.png" alt="Drei-Winter_c_Matthias-Horn_1300-1_1682276548522408_v0_h"><img class="drei_-winter_c_-matthias_-horn_1608-dHompM" data-id="84:13" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1d01f25f9983b63ec34ee/img/drei-winter-c-matthias-horn-1608.png" alt="Drei_Winter_c_Matthias_Horn_1608"><p class="simplytv-requisiteur-dHompM valign-text-bottom" data-id="43:5"><span><span class="span0-dZkmqc">SIMPLYTV<br></span><span class="span1-dZkmqc">Requisiteur <br>für First Cut GmbH<br>Image Film “SimplyTV”<br>28.08.23 - 03.09.23</span></span></p><div class="simplytv-dHompM" data-id="33:77"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/Q2krTKYFGts?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0558-dHompM screenshot-2024-01-16-at-0558" data-id="33:85" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-1.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0558-xZwtzq screenshot-2024-01-16-at-0558" data-id="33:84" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-3.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0558-PU5qZn screenshot-2024-01-16-at-0558" data-id="33:86" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-5.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0558-STo1xX screenshot-2024-01-16-at-0558" data-id="33:80" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-2.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0558-BlK2sv screenshot-2024-01-16-at-0558" data-id="33:78" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0558-q489G7 screenshot-2024-01-16-at-0558" data-id="33:88" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-4.png" alt="Screenshot 2024-01-16 at 05.58"><p class="wiener-stdtische-set-dHompM valign-text-bottom ibmplexmono-bold-black-27px" data-id="49:58"><span><span class="span0-IxChrQ ibmplexmono-bold-black-27px">WIENER STÄDTISCHE<br></span><span class="span1-IxChrQ ibmplexmono-bold-black-18px">Set Design <br>für PPM Next Wien <br>Image Film „Wiener Städtische“<br>20.03.23 - 23.03.23</span></span></p><div class="screenshot-2024-01-16-at-0637-1-dHompM" data-id="49:59"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/Ryl0solZx8w?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2023-10-31-at-1035-1-dHompM" data-id="49:60" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-10-31-at-10-35-1.png" alt="Screenshot 2023-10-31 at 10.35 1"><img class="screenshot-2023-10-31-at-1035-2-dHompM" data-id="49:61" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-10-31-at-10-35-2.png" alt="Screenshot 2023-10-31 at 10.35 2"><img class="screenshot-2023-10-31-at-1036-1-dHompM" data-id="49:64" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-10-31-at-10-36-1.png" alt="Screenshot 2023-10-31 at 10.36 1"><img class="screenshot-2023-10-31-at-1035-3-dHompM" data-id="49:62" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-10-31-at-10-35-3.png" alt="Screenshot 2023-10-31 at 10.35 3"><img class="screenshot-2024-01-16-at-0637-2-dHompM" data-id="49:66" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-37-1.png" alt="Screenshot 2024-01-16 at 06.37 2"><img class="screenshot-2023-10-31-at-1035-4-dHompM" data-id="49:63" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2023-10-31-at-10-35-4.png" alt="Screenshot 2023-10-31 at 10.35 4"><p class="ycom2-food-styling-a-dHompM valign-text-bottom ibmplexmono-bold-black-27-1px" data-id="45:41"><span><span class="span0-Vd1oDA ibmplexmono-bold-black-27-1px">YCOM2<br></span><span class="span1-Vd1oDA ibmplexmono-bold-black-18-1px">Food Styling Asst. <br>für Amazon Prime UK <br>Spielfilm„Your ChristmasOr Mine 2”<br>23.04.23 - 03.05.23</span></span></p><div class="screenshot-2024-02-16-at-1130-3-dHompM" data-id="79:4"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/D3BMVVQ69PU?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-02-16-at-1130-2-dHompM" data-id="45:43" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-30-1.png" alt="Screenshot 2024-02-16 at 11.30 2"><img class="screenshot-2024-02-16-at-1135-2-dHompM" data-id="45:45" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-35-2.png" alt="Screenshot 2024-02-16 at 11.35 2"><img class="screenshot-2024-02-16-at-1134-1-dHompM" data-id="45:44" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-34-1.png" alt="Screenshot 2024-02-16 at 11.34 1"><img class="screenshot-2024-02-16-at-1137-1-dHompM" data-id="45:46" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-37-1.png" alt="Screenshot 2024-02-16 at 11.37 1"><img class="screenshot-2024-02-16-at-1138-1-dHompM" data-id="45:47" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-38-1.png" alt="Screenshot 2024-02-16 at 11.38 1"><img class="screenshot-2024-02-16-at-1143-1-dHompM" data-id="45:48" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-02-16-at-11-43-1.png" alt="Screenshot 2024-02-16 at 11.43 1"><p class="in-der-nacht-set-des-dHompM valign-text-bottom ibmplexmono-bold-black-27px" data-id="49:69"><span><span class="span0-odI78A ibmplexmono-bold-black-27px">IN DER NACHT<br></span><span class="span1-odI78A ibmplexmono-bold-black-18px">Set Design <br>für Joyce Muniz Wien <br>Musikvideo „In der Nacht“<br>26.07.22 - 06.08.22</span></span></p><div class="screenshot-2024-01-16-at-0604-1-dHompM" data-id="49:79"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/AEHlyjnmmOY?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0604-2-dHompM" data-id="49:80" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-04-1.png" alt="Screenshot 2024-01-16 at 06.04 2"><img class="screenshot-2024-01-16-at-0604-3-dHompM" data-id="49:81" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-04-3.png" alt="Screenshot 2024-01-16 at 06.04 3"><img class="screenshot-2024-01-16-at-0604-6-dHompM" data-id="49:84" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-04-6.png" alt="Screenshot 2024-01-16 at 06.04 6"><img class="screenshot-2024-01-16-at-0604-5-dHompM" data-id="49:83" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-04-5.png" alt="Screenshot 2024-01-16 at 06.04 5"><img class="screenshot-2024-01-16-at-0605-2-dHompM" data-id="49:86" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-05-2.png" alt="Screenshot 2024-01-16 at 06.05 2"><img class="screenshot-2024-01-16-at-0605-1-dHompM" data-id="49:85" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-05-1.png" alt="Screenshot 2024-01-16 at 06.05 1"><p class="adeg-head-food-styli-dHompM ibmplexmono-bold-black-27px" data-id="93:81"><span class="span0-o2x17Y ibmplexmono-bold-black-27px">ADEG<br></span><span class="span1-o2x17Y ibmplexmono-bold-black-18px">Head Food Styling <br>für PPM Next Wien<br>Image Film “Adeg”<br>11.10.23 - 13.10.23<br><br><br></span></p><div class="adeg-video-resume-dHompM" data-id="93:82"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/eVyrzK_jrww?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0556-dHompM screenshot-2024-01-16-at-0556" data-id="93:84" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-56-1.png" alt="Screenshot 2024-01-16 at 05.56"><img class="screenshot-2024-01-16-at-0556-xZwtzq screenshot-2024-01-16-at-0556" data-id="93:87" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-56-4.png" alt="Screenshot 2024-01-16 at 05.56"><img class="screenshot-2024-01-16-at-0556-PU5qZn screenshot-2024-01-16-at-0556" data-id="93:86" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-56-3.png" alt="Screenshot 2024-01-16 at 05.56"><img class="screenshot-2024-01-16-at-0556-STo1xX screenshot-2024-01-16-at-0556" data-id="93:88" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-56-5.png" alt="Screenshot 2024-01-16 at 05.56"><img class="screenshot-2024-03-01-at-1101-1-dHompM" data-id="93:89" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65e1a82cd2fb90981fe803fd/img/screenshot-2024-03-01-at-11-01-1.png" alt="Screenshot 2024-03-01 at 11.01 1"><img class="screenshot-2024-01-16-at-0556-BlK2sv screenshot-2024-01-16-at-0556" data-id="93:83" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-56.png" alt="Screenshot 2024-01-16 at 05.56"><p class="bundesministerium-in-dHompM ibmplexmono-bold-black-27px" data-id="45:49"><span class="span0-wB7NmJ ibmplexmono-bold-black-27px">BUNDESMINISTERIUM INNERES<br></span><span class="span1-wB7NmJ ibmplexmono-bold-black-18px">Set Design<br>für PPM Next Wien<br>Image Film „Bundesministerium für Inneres“<br>10.04.23 - 14.04.23</span></p><div class="screenshot-2024-01-16-at-0601-1-dHompM" data-id="45:50"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/taZkvAFxIRA?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0600-1-dHompM" data-id="45:51" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-00-1.png" alt="Screenshot 2024-01-16 at 06.00 1"><img class="screenshot-2024-01-16-at-0600-2-dHompM" data-id="45:52" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-00-2.png" alt="Screenshot 2024-01-16 at 06.00 2"><img class="screenshot-2024-01-16-at-0600-3-dHompM" data-id="45:53" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-00-3.png" alt="Screenshot 2024-01-16 at 06.00 3"><img class="screenshot-2024-01-16-at-0601-2-dHompM" data-id="45:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-01-2.png" alt="Screenshot 2024-01-16 at 06.01 2"><img class="screenshot-2024-01-16-at-0601-3-dHompM" data-id="45:55" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-01-3.png" alt="Screenshot 2024-01-16 at 06.01 3"><img class="screenshot-2024-01-16-at-0601-5-dHompM" data-id="45:57" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-01-5.png" alt="Screenshot 2024-01-16 at 06.01 5"><p class="arbeiterkammer-junio-dHompM ibmplexmono-bold-black-27-1px" data-id="43:6"><span class="span0-6XpzXG ibmplexmono-bold-black-27-1px">ARBEITERKAMMER<br></span><span class="span1-6XpzXG ibmplexmono-bold-black-18-1px">Junior Art Director <br>für PPM NEXT<br>Image Film “Arbeiterkammer”<br>16.07.23 - 21.07.23<br></span></p><div class="arbeiterkammer-dHompM" data-id="35:3"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/E8LeJkPRuZg?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0559-dHompM screenshot-2024-01-16-at-0559" data-id="35:7" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0559-xZwtzq screenshot-2024-01-16-at-0559" data-id="35:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-1.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0558-x8jBBL screenshot-2024-01-16-at-0558" data-id="35:5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-7.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0559-PU5qZn screenshot-2024-01-16-at-0559" data-id="35:8" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-2.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0559-STo1xX screenshot-2024-01-16-at-0559" data-id="35:10" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-4.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0558-DM728u screenshot-2024-01-16-at-0558" data-id="35:4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-58-6.png" alt="Screenshot 2024-01-16 at 05.58"><img class="screenshot-2024-01-16-at-0559-BlK2sv screenshot-2024-01-16-at-0559" data-id="35:9" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-3.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0559-q489G7 screenshot-2024-01-16-at-0559" data-id="35:11" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-5.png" alt="Screenshot 2024-01-16 at 05.59"><img class="screenshot-2024-01-16-at-0559-x8jBBL screenshot-2024-01-16-at-0559" data-id="35:13" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-05-59-6.png" alt="Screenshot 2024-01-16 at 05.59"><p class="drei-austria-set-des-dHompM ibmplexmono-bold-black-27-1px" data-id="49:67"><span class="span0-gtj5gW ibmplexmono-bold-black-27-1px">DREI AUSTRIA<br></span><span class="span1-gtj5gW ibmplexmono-bold-black-18-1px">Set Design <br>für Kaiserschnitt Wien <br>Image Film „Drei Austria”<br>17.10.22 - 20.10.22</span></p><div class="screenshot-2024-01-16-at-0603-1-dHompM" data-id="49:70"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/_b8QRV8wXGE?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><img class="screenshot-2024-01-16-at-0603-7-dHompM" data-id="49:76" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-7.png" alt="Screenshot 2024-01-16 at 06.03 7"><img class="screenshot-2024-01-16-at-0603-6-dHompM" data-id="49:75" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-6.png" alt="Screenshot 2024-01-16 at 06.03 6"><img class="screenshot-2024-01-16-at-0603-3-dHompM" data-id="49:72" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-3.png" alt="Screenshot 2024-01-16 at 06.03 3"><img class="screenshot-2024-01-16-at-0603-4-dHompM" data-id="49:73" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-4.png" alt="Screenshot 2024-01-16 at 06.03 4"><img class="screenshot-2024-01-16-at-0603-5-dHompM" data-id="49:74" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-5.png" alt="Screenshot 2024-01-16 at 06.03 5"><img class="screenshot-2024-01-16-at-0603-2-dHompM" data-id="49:71" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/65cf579fefd6dc45a4c4174d/releases/65cf5846bddc7e6aa15585d3/img/screenshot-2024-01-16-at-06-03-1.png" alt="Screenshot 2024-01-16 at 06.03 2"><p class="ein-ganzes-leben-req-dHompM ibmplexmono-bold-black-27px" data-id="49:88"><span class="span0-XG7xKP ibmplexmono-bold-black-27px">EIN GANZES LEBEN<br></span><span class="span1-XG7xKP ibmplexmono-bold-black-18px">Requisiteur Asst. <br>für Tobis Film/EpoFilm Wien<br>Spielfilm „Ein ganzes Leben‘‘<br>07.06.22 – 22.07.22</span></p><div class="f8c88419e888431f12bf-dHompM" data-id="49:89"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/QISMl5N7fzg?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><p class="vienna-blood-food-st-dHompM ibmplexmono-bold-black-27-1px" data-id="49:91"><span class="span0-HoWlV5 ibmplexmono-bold-black-27-1px">VIENNA BLOOD<br></span><span class="span1-HoWlV5 ibmplexmono-bold-black-18-1px">Food Styling<br>für Mephisto<br>Spielfilm “Vienna Blood 4”<br>18.09.23 - 19.09.23 </span></p><div class="vienna-blood-dHompM" data-id="49:90"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/vg1rXtBGg6U?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
